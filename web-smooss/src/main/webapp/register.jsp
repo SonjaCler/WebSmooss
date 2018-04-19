@@ -16,8 +16,8 @@
 							<i class="fas fa-at"></i>
 						</div>
 					</div>
-					<input type="text" class="form-control" name="email" id=""
-						placeholder="Adresse mail" class="input_modal">
+					<input type="email" class="form-control" name="email" id=""
+						placeholder="Adresse mail" class="input_modal"required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -28,7 +28,7 @@
 						</div>
 					</div>
 					<input type="text" class="form-control" name="firstName" id=""
-						placeholder="Prénom" class="input_modal">
+						placeholder="Prénom" class="input_modal" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -39,7 +39,7 @@
 						</div>
 					</div>
 					<input type="text" class="form-control" name="lastName" id=""
-						placeholder="Nom" class="input_modal">
+						placeholder="Nom" class="input_modal" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -60,8 +60,9 @@
 							<i class="fas fa-lock"></i>
 						</div>
 					</div>
-					<input type="text" class="form-control" name="password" id=""
-						placeholder="Mot de passe" class="input_modal">
+					
+					<input type="password" class="form-control" name="password" id=""
+						minlength="9" placeholder="Mot de passe" class="input_modal" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -71,8 +72,8 @@
 							<i class="fas fa-lock"></i>
 						</div>
 					</div>
-					<input type="text" class="form-control" name="confirmpassword"
-						id="" placeholder="Confirmation mot de passe" class="input_modal">
+					<input type="password" class="form-control" name="confirmpassword"
+						minlength="9" id="" placeholder="Confirmation mot de passe" class="input_modal"required>
 				</div>
 			</div>
 			<div class="modal-footer justify-content-center">
