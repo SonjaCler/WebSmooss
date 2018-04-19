@@ -36,7 +36,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title text-center" id="exampleModalLabel">Inscription</h5>
 	                </div>
-					<form method="POST" action="RegisterController">
+					<form method="POST" action="RegisterServlet">
 		                <div class="modal-body">
 	                        <div class="form-group">
 	                            <div class="input-group">
