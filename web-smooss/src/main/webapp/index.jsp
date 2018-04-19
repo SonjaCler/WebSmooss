@@ -118,7 +118,7 @@
 	                                    <div class="input-group-prepend">
 	                                        <div class="input-group-text"> <i class="fas fa-lock"></i> </div>
 	                                    </div>
-	                                    <input type="text" class="form-control" name="password" placeholder="Mot de passe" class="input_modal">
+	                                    <input type="password" class="form-control" name="password" placeholder="Mot de passe" class="input_modal">
 	                                </div>
 	                            </div>
 	                        <hr class="hr-text" data-content="OU">
