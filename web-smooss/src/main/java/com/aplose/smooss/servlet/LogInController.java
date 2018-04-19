@@ -43,7 +43,7 @@ public class LogInController extends HttpServlet {
 		String email 	= request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		User u = UserService.getInstance().findByLoginAndPassword(email, password);
+		User u = UserService.getInstance().findByEmailAndPassword(email, password);
 	
 		if (u != null) {
 			
