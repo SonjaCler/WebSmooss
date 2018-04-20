@@ -64,7 +64,7 @@
 		<h4>&#149; Gestion du profil &#149;</h4>
 
 		<hr>
-<form action="/ProfileController" method="POST">
+<form action="/ProfileController" method="POST"> 
 		<div class="container">
 
 			<div class="row">

@@ -42,7 +42,7 @@ public class ProfileController extends HttpServlet {
 //		String nickName = null;
 //		String picture = null;
 		User u = UserService.getInstance().findByEmailAndPassword(email, password);
-		if (u != null) {
+		if (u != null){
 			
 			HttpSession session = request.getSession();
 			session.getAttribute("email");
