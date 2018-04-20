@@ -26,7 +26,7 @@
             
             <div class="row justify-content-center" id="middle_blocks">
                 <div class="clip-block">
-                	<a href="event.jsp">
+                	<a href="event.view">
 	                    <div class="clip-each clip-solid">
 	                        <div class="clip-caption">
 	                                <i class="fal fa-4x fa-calendar-alt"></i>

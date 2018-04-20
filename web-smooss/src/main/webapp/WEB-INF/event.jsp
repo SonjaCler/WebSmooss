@@ -13,29 +13,40 @@
     </head>
     <body>
         
-    <div id="img-title">
-        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
-        <h2 class="Style5">Soirée Techno-House</h2>
-    </div>
-
-        <div class="container">
-            <div class="row" style=" margin-top: 4%;">
-                <div class="col-sm-3">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1541762818792!2d3.9077731149273682!3d43.60333136367297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a57c3fa4f34d%3A0xec9311353c764d24!2sMill%C3%A9naire!5e0!3m2!1sfr!2sfr!4v1522785402462"
-                        width="200" height="200" frameborder="0" style="border:0; border-radius:8px;" allowfullscreen></iframe>
-                </div>
-                <div class="col-sm-9 event-info">
-                    <p style="text-align:left ; color:#fff;">Découvrez le style N-Drix en live, un parfait mélange de ses productions, de morceaux de différents univers
-                        remixés par ses soins, le tout basé sur une interactivité puissante avec le public.</p>
-                    <p style="text-align:left ;  color:#fff;">Ce palmarès incroyable lui offre l'occasion de se produire sur les plus grosses scènes françaises et internationales
-                        : COLOR ME RAD Toulouse, Rouen et Lyon, SUMMER BREAK PARTY DISNEYLAND Paris, I LOVE TECHNO Montpellier,TECHNO
-                        PARADE Paris, FESTIVAL ELEKTRIC PARK Chatou, SUMMER SOUND Rochefort, AMNESIA Cap D'Agde au SPRINGBREAK
-                      </p>
-                    <p style="color:#fff;"><b style="color:#ffc107;">Date : </b>Samedi 14 avril</p>
-                    <p style="color:#fff;"><b style="color:#ffc107;">Heure : </b>18h à 05h</p>
-                    <hr>
-                </div>
-            </div>
+        <form method="POST" action="EventController">
+        	<div class="container-fluid img-title-description-event-block">
+		        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
+		        <div class="title-description-event">
+		        	<h2> <input type="text" class="input-event" name="titleEvent" id="titleEvent" placeholder="Nom de l'évènement"> </h2>
+		        	<textarea style="resize: none;" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
+		   		</div>
+			</div>
+	        <div class="container">
+	            <div class="row justify-content-center mt-4">
+	                <!-- <div class="col-sm-3">
+	                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1541762818792!2d3.9077731149273682!3d43.60333136367297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a57c3fa4f34d%3A0xec9311353c764d24!2sMill%C3%A9naire!5e0!3m2!1sfr!2sfr!4v1522785402462"
+	                        width="200" height="200" frameborder="0" style="border:0; border-radius:8px;" allowfullscreen></iframe>
+	                </div> -->
+	                <div class="event-info">
+	                	<div class="">
+	                		Adresse : 
+	                		<input type="text" name="adresse" id="adresse">
+	                	</div>
+	                  	<div class="start-date-time-event">
+		                  	Début :
+		                  	<input type="date" name="startDateEvent" id="startDateEvent">
+		                  	<input type="time" name="startTimeEvent" id="startTimeEvent">
+	                  	</div>
+	                  	<div class="end-date-time-event">
+		                  	Fin :
+		                  	<input type="date" name="endDateEvent" id="endDateEvent">
+		                  	<input type="time" name="endTimeEvent" id="endTimeEvent">
+	                    </div>
+	                    <hr>
+	                    <input type="submit" name="submitButton" id="submitButton" value="Créer mon Smooss">
+	                </div>
+	            </div>
+        </form>
        
             <div class="row justify-content-around mt-5 color_text" id="module_block">
                 <div class="hexagon_module">

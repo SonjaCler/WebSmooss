@@ -49,7 +49,6 @@ public class LogInController extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
-			session.setAttribute("firstname", u.getFirstName());
 					
 			getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 			
