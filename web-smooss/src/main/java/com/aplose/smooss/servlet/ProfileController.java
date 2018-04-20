@@ -42,7 +42,7 @@ public class ProfileController extends HttpServlet {
 //		String nickName = request.getParameter("nickName");
 //		String picture = request.getParameter("picture");;
 //	User u = UserService.getInstance().read(email, password,firstName,lastName,nickName,picture);
-		String email = request.getParameter("email");
+		String email = request.getParameter("email"); 
 		String password = request.getParameter("password");
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
