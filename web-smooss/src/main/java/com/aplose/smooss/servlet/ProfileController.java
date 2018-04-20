@@ -35,22 +35,30 @@ public class ProfileController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		String email = request.getParameter("email");
+//		String password = request.getParameter("password");
+//		String firstName = request.getParameter("firstName");
+//		String lastName = request.getParameter("lastName");
+//		String nickName = request.getParameter("nickName");
+//		String picture = request.getParameter("picture");;
+//	User u = UserService.getInstance().read(email, password,firstName,lastName,nickName,picture);
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String nickName = request.getParameter("nickName");
-		String picture = request.getParameter("picture");;
-	User u = UserService.getInstance().findByEmailAndPassword(email, password);
+		String picture = request.getParameter("picture");
+		
+		User u = UserService.getInstance().read(email,password,firstName,lastName,nickName,picture);
 		if (u != null){
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("email", email);
-			session.setAttribute("password", password);
-			session.setAttribute("firstName", firstName);
-			session.setAttribute("lastName", lastName);
-			session.setAttribute("nickName", nickName);
-			session.setAttribute("picture", picture);
+			session.setAttribute("email",email);
+			session.setAttribute("password",password);
+			session.setAttribute("firstName",firstName);
+			session.setAttribute("lastName",lastName);
+			session.setAttribute("nickName",nickName);
+			session.setAttribute("picture",picture);
 			getServletContext().getRequestDispatcher("/WEB-INF/managementProfil.jsp").forward(request, response);
 			
 		} else {
@@ -59,7 +67,9 @@ public class ProfileController extends HttpServlet {
 			response.sendRedirect("index.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
 		
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+//		getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -71,18 +81,34 @@ public class ProfileController extends HttpServlet {
 //		response.setContentType("text/html");
 //		User u = UserService.getInstance().findByEmailAndPassword("email", "password");
 		
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String nickName = request.getParameter("nickName");
-		String picture = request.getParameter("picture");
-		
-		User us = UserService.getInstance().update(email,password,firstName,lastName,nickName,picture);
+//		String email = request.getParameter("email");
+//		String password = request.getParameter("password");
+//		String firstName = request.getParameter("firstName");
+//		String lastName = request.getParameter("lastName");
+//		String nickName = request.getParameter("nickName");
+//		String picture = request.getParameter("picture");
 //		
-//		User u = new User(email, password, firstName, lastName, nickName, picture);
+//		User u = UserService.getInstance().read(email,password,firstName,lastName,nickName,picture);
+//		if (u != null){
+//			
+//			HttpSession session = request.getSession();
+//			session.getAttribute("email");
+//			session.getAttribute("password");
+//			session.getAttribute("firstName");
+//			session.getAttribute("lastName");
+//			session.getAttribute("nickName");
+//			session.getAttribute("picture");
+//			getServletContext().getRequestDispatcher("/WEB-INF/managementProfil.jsp").forward(request, response);
+//			
+//		} else {
+//		
+//			String message = "Le profil ne correspond pas";
+//			response.sendRedirect("index.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
+//		
+//		}
+
 		
-		us.update(email,password,firstName,lastName,nickName,picture);
+		
 		
 		
 //		User u = UserService.getInstance().find(request.getParameter("login, firstName"));
