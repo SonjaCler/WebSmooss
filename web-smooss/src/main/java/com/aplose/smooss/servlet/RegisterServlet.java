@@ -1,6 +1,8 @@
 package com.aplose.smooss.servlet;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +15,7 @@ import com.aplose.smooss.services.UserService;
 /**
  * Servlet implementation class ExempleServlet
  */
-@WebServlet("/RegisterServlet")
+@WebServlet(urlPatterns = "/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,14 +39,21 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String nickName = request.getParameter("nickName");
+		
+		String lastName 	= request.getParameter("lastName");
+		String firstName	= request.getParameter("firstName");
+		String email 		= request.getParameter("email");
+		String nickName 	= request.getParameter("nickName");
+		String password 	= request.getParameter("password");
+		
+		
 		User u = new User(email, password, firstName, lastName, nickName, null);
 		UserService.getInstance().create(u);
-		
+	
+		// TODO find a better way to do it ?!
+		String message = "Votre compte à bien été créé !";
+		response.sendRedirect("index.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
+	
 	}
 
 }

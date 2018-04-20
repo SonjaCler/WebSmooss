@@ -36,7 +36,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title text-center" id="exampleModalLabel">Inscription</h5>
 	                </div>
-					<form method="POST" action="RegisterController">
+					<form method="POST" action="RegisterServlet">
 		                <div class="modal-body">
 	                        <div class="form-group">
 	                            <div class="input-group">
@@ -59,7 +59,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-at"></i> </div>
 	                                </div>
-	                                <input type="text" class="form-control" name="email" placeholder="Adresse mail" class="input_modal">
+	                                <input type="email" class="form-control" name="email" placeholder="Adresse mail" class="input_modal">
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
@@ -110,7 +110,7 @@
 	                                    <div class="input-group-prepend">
 	                                        <div class="input-group-text"> <i class="fas fa-user"></i> </div>
 	                                    </div>
-	                                    <input type="text" class="form-control" name="email" placeholder="Adresse mail | Pseudo" class="input_modal">
+	                                    <input type="email" class="form-control" name="email" placeholder="Adresse mail | Pseudo" class="input_modal">
 	                                </div>
 	                            </div>
 	                            <div class="form-group">
@@ -127,9 +127,7 @@
 	                        </div>
 	                    </div>
 	                    <div class="modal-footer justify-content-center">
-	                        <a href="home_user.php" style="width: 100%;">
-	                            <button type="submit" class="btn button_submit_modal" id="button_submit_connexion_modal"> Connexion ! </button>
-	                        </a>
+                            <button type="submit" class="btn button_submit_modal" id="button_submit_connexion_modal"> Connexion ! </button>
 	                    </div>
 	            	</form>
                 </div>
