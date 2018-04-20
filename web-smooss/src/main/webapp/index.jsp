@@ -110,7 +110,7 @@
 	                                    <div class="input-group-prepend">
 	                                        <div class="input-group-text"> <i class="fas fa-user"></i> </div>
 	                                    </div>
-	                                    <input type="email" class="form-control" name="email" placeholder="Adresse mail | Pseudo" class="input_modal">
+	                                    <input type="email" class="form-control" name="email" placeholder="Adresse mail" class="input_modal">
 	                                </div>
 	                            </div>
 	                            <div class="form-group">
