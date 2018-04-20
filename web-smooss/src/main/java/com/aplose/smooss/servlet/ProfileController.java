@@ -21,7 +21,7 @@ import com.aplose.smooss.services.UserService;
 @WebServlet(urlPatterns =  "/ProfileController")
 public class ProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public long id = 0;
+	
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -35,12 +35,12 @@ public class ProfileController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email = null;
-		String password = null;
-		String firstName = null;
-		String lastName = null;
-		String nickName = null;
-		String picture = null;
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String nickName = request.getParameter("nickName");
+		String picture = request.getParameter("picture");;
 	User u = UserService.getInstance().findByEmailAndPassword(email, password);
 		if (u != null){
 			
