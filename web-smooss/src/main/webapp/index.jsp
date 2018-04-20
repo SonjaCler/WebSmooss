@@ -43,7 +43,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-user"></i> </div>
 	                                </div>
-	                                <input type="text" class="form-control" name="lastName" placeholder="Nom" class="input_modal">
+	                                <input type="text" class="form-control" name="lastName" placeholder="Nom" class="input_modal" required>
 	                            </div>
 	                        </div>		  
 	                        <div class="form-group">
@@ -51,7 +51,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-user"></i> </div>
 	                                </div>
-	                                <input type="text" class="form-control" name="firstName" placeholder="Prénom" class="input_modal">
+	                                <input type="text" class="form-control" name="firstName" placeholder="Prénom" class="input_modal" required>
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
@@ -59,7 +59,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-at"></i> </div>
 	                                </div>
-	                                <input type="email" class="form-control" name="email" placeholder="Adresse mail" class="input_modal">
+	                                <input type="email" class="form-control" name="email" placeholder="Adresse mail" class="input_modal" required>
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
@@ -75,7 +75,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-lock"></i> </div>
 	                                </div>
-	                                <input type="password" class="form-control" name="password" placeholder="Mot de passe" class="input_modal">
+	                                <input type="password" class="form-control" name="password" minlength="9" ="Mot de passe" class="input_modal" required>
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
@@ -83,7 +83,7 @@
 	                                <div class="input-group-prepend">
 	                                    <div class="input-group-text"> <i class="fas fa-lock"></i> </div>
 	                                </div>
-	                                <input type="password" class="form-control" name="passwordConf" placeholder="Confirmation mot de passe" class="input_modal">
+	                                <input type="password" class="form-control" name="passwordConf" minlength="9" placeholder="Confirmation mot de passe" class="input_modal" required>
 	                            </div>
 	                        </div>
 		                </div>

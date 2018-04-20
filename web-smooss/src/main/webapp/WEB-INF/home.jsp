@@ -21,7 +21,7 @@
 
             <div class="row justify-content-center" id="title">
                 <h1>&#149; SMOOSS &#149; </h1>
-                <h6>Bienvenu sur Smooss <%= (String)session.getAttribute("email") %> </h6>
+                <h6>Bienvenue sur Smooss <%= (String)session.getAttribute("email") %> </h6>
             </div>
             
             <div class="row justify-content-center" id="middle_blocks">
