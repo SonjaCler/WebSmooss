@@ -41,14 +41,18 @@
 	            	</a>
                 </div>
                 <div class="clip-block">
-                    <a href="gestionProfil.php" class="clip-each clip-gradient">
-                        <div class="clip-caption"> <i class="fas fa-3x fa-user"></i> </div>
+                    <a href="managementProfil.jsp" class="clip-each clip-gradient" >
+                        <div class="clip-caption">
+                            <i class="fas fa-3x fa-user"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="clip-block">
                     <a href="mesInvitations.php">
                         <div class="clip-each clip-solid">
-                            <div class="clip-caption"> <i class="fas fa-5x fa-envelope" style="color:#fff;"></i> </div>
+                            <div class="clip-caption">
+                                <i class="fas fa-5x fa-envelope" style="color:#fff;"></i>
+                            </div>
                             <div class="social-share-block">
                                 <span class="social-each">
                                     <strong>4</strong>
