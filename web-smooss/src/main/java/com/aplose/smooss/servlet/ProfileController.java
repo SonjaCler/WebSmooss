@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
+//import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,16 +37,20 @@ public class ProfileController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = null;
 		String password = null;
-//		String firstName = null;
-//		String lastName = null;
-//		String nickName = null;
-//		String picture = null;
-		User u = UserService.getInstance().findByEmailAndPassword(email, password);
+		String firstName = null;
+		String lastName = null;
+		String nickName = null;
+		String picture = null;
+	User u = UserService.getInstance().findByEmailAndPassword(email, password);
 		if (u != null){
 			
 			HttpSession session = request.getSession();
-			session.getAttribute("email");
-					
+			session.setAttribute("email", email);
+			session.setAttribute("password", password);
+			session.setAttribute("firstName", firstName);
+			session.setAttribute("lastName", lastName);
+			session.setAttribute("nickName", nickName);
+			session.setAttribute("picture", picture);
 			getServletContext().getRequestDispatcher("/WEB-INF/managementProfil.jsp").forward(request, response);
 			
 		} else {
@@ -65,7 +69,7 @@ public class ProfileController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		response.setContentType("text/html");
-		User u = UserService.getInstance().findByEmailAndPassword("email", "password");
+//		User u = UserService.getInstance().findByEmailAndPassword("email", "password");
 		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
