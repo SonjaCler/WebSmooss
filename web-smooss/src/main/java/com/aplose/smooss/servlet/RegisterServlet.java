@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.aplose.smooss.exception.EmailException;
 import com.aplose.smooss.model.User;
 import com.aplose.smooss.services.UserService;
 
@@ -48,12 +49,17 @@ public class RegisterServlet extends HttpServlet {
 		
 		
 		User u = new User(email, password, firstName, lastName, nickName, null);
-		UserService.getInstance().create(u);
-	
-		// TODO find a better way to do it ?!
-		String message = "Votre compte à bien été créé !";
+		String message;
+		
+		try {
+			UserService.getInstance().create(u);
+			message = "Votre compte à bien été créé !";
+		} catch (EmailException e) {
+			// TODO Auto-generated catch block
+			message = e.getMessage();	
+		}
 		response.sendRedirect("index.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
-	
+		
 	}
 
 }
