@@ -21,25 +21,27 @@
 
             <div class="row justify-content-center" id="title">
                 <h1>&#149; SMOOSS &#149; </h1>
-                <h6>Bienvenue sur Smooss <%= (String)session.getAttribute("email") %> </h6>
+                <h6>Bienvenu sur Smooss <%= (String)session.getAttribute("firstname") %> </h6>
             </div>
             
             <div class="row justify-content-center" id="middle_blocks">
                 <div class="clip-block">
-                    <div class="clip-each clip-solid">
-                        <div class="clip-caption">
-                                <i class="fal fa-4x fa-calendar-alt"></i>
-                        </div>
-                        <div class="social-share-block">
-                            <span class="social-each"></span>
-                            <span>
-                                <i class="fas fa-plus"></i>
-                            </span>
-                        </div>
-                    </div>
+                	<a href="event.view">
+	                    <div class="clip-each clip-solid">
+	                        <div class="clip-caption">
+	                                <i class="fal fa-4x fa-calendar-alt"></i>
+	                        </div>
+	                        <div class="social-share-block">
+	                            <span class="social-each"></span>
+	                            <span>
+	                                <i class="fas fa-plus"></i>
+	                            </span>
+	                        </div>
+	                    </div>
+	            	</a>
                 </div>
                 <div class="clip-block">
-                    <a href="managementProfil.jsp" class="clip-each clip-gradient" >
+                    <a href="managementProfil.view" class="clip-each clip-gradient" >
                         <div class="clip-caption">
                             <i class="fas fa-3x fa-user"></i>
                         </div>
