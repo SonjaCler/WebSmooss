@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,8 +18,10 @@
         	<div class="container-fluid img-title-description-event-block">
 		        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
 		        <div class="title-description-event">
+					<c:choose>
+					</c:choose>
 		        	<h2> <input type="text" class="input-event" name="titleEvent" id="titleEvent" placeholder="Nom de l'évènement"> </h2>
-		        	<textarea style="resize: none;" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
+		        	<textarea style="resize: none;" name="descriptionEvent" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
 		   		</div>
 			</div>
 	        <div class="container">
@@ -30,7 +33,7 @@
 	                <div class="event-info">
 	                	<div class="">
 	                		Adresse : 
-	                		<input type="text" name="adresse" id="adresse">
+	                		<input type="text" name="locationEvent" id="adresse">
 	                	</div>
 	                  	<div class="start-date-time-event">
 		                  	Début :
@@ -97,3 +100,4 @@
         
     </body>
 </html>
+

@@ -41,7 +41,7 @@
 	            	</a>
                 </div>
                 <div class="clip-block">
-                    <a href="managementProfil.view" class="clip-each clip-gradient" >
+                    <a href="managementProfil.jsp" class="clip-each clip-gradient" >
                         <div class="clip-caption">
                             <i class="fas fa-3x fa-user"></i>
                         </div>
