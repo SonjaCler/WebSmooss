@@ -35,13 +35,6 @@ public class ProfileController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String email = request.getParameter("email");
-//		String password = request.getParameter("password");
-//		String firstName = request.getParameter("firstName");
-//		String lastName = request.getParameter("lastName");
-//		String nickName = request.getParameter("nickName");
-//		String picture = request.getParameter("picture");;
-//	User u = UserService.getInstance().read(email, password,firstName,lastName,nickName,picture);
 		String email = request.getParameter("email"); 
 		String password = request.getParameter("password");
 		String firstName = request.getParameter("firstName");
@@ -49,16 +42,14 @@ public class ProfileController extends HttpServlet {
 		String nickName = request.getParameter("nickName");
 		String picture = request.getParameter("picture");
 		
-		User u = UserService.getInstance().read(email,password,firstName,lastName,nickName,picture);
+		User u = (User)request.getSession().getAttribute("user");
 		if (u != null){
-			
-			HttpSession session = request.getSession();
-			session.setAttribute("email",email);
-			session.setAttribute("password",password);
-			session.setAttribute("firstName",firstName);
-			session.setAttribute("lastName",lastName);
-			session.setAttribute("nickName",nickName);
-			session.setAttribute("picture",picture);
+			u.setEmail(email);
+			u.setPassword(password);
+			u.setFirstName(firstName);
+			u.setLastName(lastName);
+			u.setNickName(nickName);
+			u.setPicture(picture);
 			getServletContext().getRequestDispatcher("/WEB-INF/managementProfil.jsp").forward(request, response);
 			
 		} else {
@@ -68,8 +59,6 @@ public class ProfileController extends HttpServlet {
 		
 		}
 
-//		getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

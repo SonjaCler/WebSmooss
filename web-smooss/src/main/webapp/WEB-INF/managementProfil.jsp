@@ -31,6 +31,9 @@
 <title>Gestion du profil</title>
 </head>
 <body>
+
+	<jsp:useBean id="user" beanName="user" scope="session"
+		type="com.aplose.smooss.model.User"></jsp:useBean>
 	<div class="container-fluid">
 
 		<div class="row" id="disconnect_button">
@@ -76,10 +79,9 @@
 							<input type="email"
 								class="form-control form-control-sm spaceInput"
 								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Enter email" name="email" value="<%= (String)session.getAttribute("email")%>">
-								 <small id="emailHelp"
-								class="form-text text-muted">We'll never share your
-								email with anyone else.</small>
+								placeholder="Enter email" name="email" value="${user.email}">
+							<small id="emailHelp" class="form-text text-muted">We'll
+								never share your email with anyone else.</small>
 
 						</div>
 
@@ -87,13 +89,11 @@
 
 							<input type="password"
 								class="form-control form-control-sm spaceInput"
-								id="exampleInputPassword1" placeholder="Password" name="password" value="<%= (String)session.getAttribute("password")%>"> 
-								
-								<input
+								id="exampleInputPassword1" placeholder="Password"
+								name="password" value="${user.password}"> <input
 								type="password" class="form-control form-control-sm spaceInput"
-								id="exampleInputPassword1" placeholder="Password" 
-								
-								name="password" value="<%= (String)session.getAttribute("password")%>">
+								id="exampleInputPassword1" placeholder="Password"
+								name="password" value="${user.password}">
 
 						</div>
 
@@ -132,13 +132,13 @@
 					<div class="col-sm-4">
 
 						<input class="form-control form-control-sm spaceInput" type="text"
-							placeholder="Nom" name="firstName"
-							value="<%=(String) session.getAttribute("firstName")%>">
+							placeholder="Nom" name="firstName" value="${user.firstName}">
 
 						<input class="form-control form-control-sm spaceInput" type="text"
-							placeholder="Prénon" name="lastName" value="<%= (String)session.getAttribute("lastName")%>"> <input
-							class="form-control form-control-sm spaceInput" type="text"
-							placeholder="Pseudo" name="nickName" value="<%= (String)session.getAttribute("nickName")%>">
+							placeholder="Prénon" name="lastName" value="${user.lastName}">
+
+						<input class="form-control form-control-sm spaceInput" type="text"
+							placeholder="Pseudo" name="nickName" value="${user.nickName}">
 
 					</div>
 
