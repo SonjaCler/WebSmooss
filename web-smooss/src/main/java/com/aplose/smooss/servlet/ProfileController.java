@@ -67,6 +67,13 @@ public class ProfileController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User u = (User)request.getSession().getAttribute("user");
+		User newU = u;
+		if (u != newU) {
+			UserService.getInstance().update(u);
+			return;
+		} 
+		
 //		response.setContentType("text/html");
 //		User u = UserService.getInstance().findByEmailAndPassword("email", "password");
 		
