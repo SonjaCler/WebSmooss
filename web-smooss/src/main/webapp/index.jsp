@@ -56,7 +56,7 @@
 									</div>
 								</div>
 								<input type="text" class="form-control" name="lastName"
-									placeholder="Nom" class="input_modal">
+									placeholder="Nom" class="input_modal" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -67,7 +67,7 @@
 									</div>
 								</div>
 								<input type="text" class="form-control" name="firstName"
-									placeholder="Prénom" class="input_modal">
+									placeholder="Prénom" class="input_modal" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -78,7 +78,7 @@
 									</div>
 								</div>
 								<input type="email" class="form-control" name="email"
-									placeholder="Adresse mail" class="input_modal">
+									placeholder="Adresse mail" class="input_modal" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -100,7 +100,7 @@
 									</div>
 								</div>
 								<input type="password" class="form-control" name="password"
-									placeholder="Mot de passe" class="input_modal">
+									placeholder="Mot de passe" class="input_modal" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -111,13 +111,14 @@
 									</div>
 								</div>
 								<input type="password" class="form-control" name="passwordConf"
-									placeholder="Confirmation mot de passe" class="input_modal">
+									placeholder="Confirmation mot de passe" class="input_modal" required>
 							</div>
 						</div>
 					</div>
-					<div class="form-group" style="text-align:center;">
-						<input id="checkbox" type="checkbox"><a href="cgu.view" style="padding:10px;">J'ai
-							lu et j'accepte les Condtions Générales d'Utilisation</a>
+					<div class="form-group" style="text-align: center;">
+						<input id="checkBoxCGU" type="checkbox" name="checkBoxCGU" required>
+						<a href="cgu.view" style="padding: 10px;">J'ai lu et j'accepte
+							les Condtions Générales d'Utilisation</a>
 					</div>
 					<div class="modal-footer justify-content-center">
 						<button type="submit" class="btn button_submit_modal"
