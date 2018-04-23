@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <a href="home.view" id="button_redirect_home"> Retour à l'accueil </a>
+                <a href="EventController" id="button_redirect_home"> Retour à l'accueil </a>
             </div>
         </div>
 
