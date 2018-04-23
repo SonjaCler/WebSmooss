@@ -11,7 +11,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<link rel="stylesheet" href="css/gestion_profil.css">
+<link rel="stylesheet" href="css/gestionProfil.css">
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -64,85 +64,89 @@
 		<h4>&#149; Gestion du profil &#149;</h4>
 
 		<hr>
-<form action="/ProfileController" method="POST"> 
-		<div class="container">
+		<form action="/ProfileController" method="POST">
+			<div class="container">
 
-			<div class="row">
+				<div class="row">
 
-				<div class="col-sm-4">
+					<div class="col-sm-4">
 
-					<div class="form-group">
+						<div class="form-group">
 
-						<input type="email"
-							class="form-control form-control-sm spaceInput"
-							id="exampleInputEmail1" aria-describedby="emailHelp"
-							placeholder="Enter email"> <small id="emailHelp"
-							class="form-text text-muted">We'll never share your email
-							
-
-							with anyone else. </small>
-							
-
-					</div>
-
-					<div class="form-group">
-
-						<input type="password"
-							class="form-control form-control-sm spaceInput"
-							id="exampleInputPassword1" placeholder="Password"> <input
-							type="password" class="form-control form-control-sm spaceInput"
-							id="exampleInputPassword1" placeholder="Password">
-
-					</div>
-
-					<button type="submit" class="btn btn-warning btnFullCol"
-						style="color: #fff; background-color: #FFC107;">Save</button>
-
-				</div>
-
-				<div class="col-sm-4">
-
-					<div class="row">
-
-						<div class="col-sm-3"></div>
-
-						<div class="col-sm-6">
-
-							<div class="card spaceInput">
-
-								<img class="card-img-top img-thumbnail"
-									src=".\img\photo_de_profil.png" alt="Card image cap">
-
-								<button type="button"
-									style="color: #fff; background-color: #FFC107;"
-									class="btn btn-dark btnFullCol">Changer picture</button>
-
-							</div>
+							<input type="email"
+								class="form-control form-control-sm spaceInput"
+								id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="Enter email" name="email" value="<%= (String)session.getAttribute("email")%>">
+								 <small id="emailHelp"
+								class="form-text text-muted">We'll never share your
+								email with anyone else.</small>
 
 						</div>
 
-						<div class="col-sm-3"></div>
+						<div class="form-group">
+
+							<input type="password"
+								class="form-control form-control-sm spaceInput"
+								id="exampleInputPassword1" placeholder="Password" name="password" value="<%= (String)session.getAttribute("password")%>"> 
+								
+								<input
+								type="password" class="form-control form-control-sm spaceInput"
+								id="exampleInputPassword1" placeholder="Password" 
+								
+								name="password" value="<%= (String)session.getAttribute("password")%>">
+
+						</div>
+
+						<button type="submit" class="btn btn-warning btnFullCol"
+							style="color: #fff; background-color: #FFC107;">Save</button>
+
+					</div>
+
+					<div class="col-sm-4">
+
+						<div class="row">
+
+							<div class="col-sm-3"></div>
+
+							<div class="col-sm-6">
+
+								<div class="card spaceInput">
+
+									<img class="card-img-top img-thumbnail"
+										src=".\img\photo_de_profil.png" alt="Card image cap">
+
+									<button type="button"
+										style="color: #fff; background-color: #FFC107;"
+										class="btn btn-dark btnFullCol">Changer picture</button>
+
+								</div>
+
+							</div>
+
+							<div class="col-sm-3"></div>
+
+						</div>
+
+					</div>
+
+					<div class="col-sm-4">
+
+						<input class="form-control form-control-sm spaceInput" type="text"
+							placeholder="Nom" name="firstName"
+							value="<%=(String) session.getAttribute("firstName")%>">
+
+						<input class="form-control form-control-sm spaceInput" type="text"
+							placeholder="Prénon" name="lastName" value="<%= (String)session.getAttribute("lastName")%>"> <input
+							class="form-control form-control-sm spaceInput" type="text"
+							placeholder="Pseudo" name="nickName" value="<%= (String)session.getAttribute("nickName")%>">
 
 					</div>
 
 				</div>
 
-				<div class="col-sm-4">
-
-					<input class="form-control form-control-sm spaceInput" type="text"
-						placeholder="Nom"> <input
-						class="form-control form-control-sm spaceInput" type="text"
-						placeholder="Prénon"> <input
-						class="form-control form-control-sm spaceInput" type="text"
-						placeholder="Pseudo">
-
-				</div>
 
 			</div>
-
-		
-	</div>
-</form>
+		</form>
 		<!-- Volet coulissant >> -->
 
 		<div id="volet_clos">

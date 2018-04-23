@@ -51,6 +51,9 @@ public class EventController extends HttpServlet {
 		Event evt = new Event(admin, name, description, location, start, end, picture);
 		EventService.getInstance().create(evt);
 		
+		System.out.println(evt.getName());
+		
+		getServletContext().getRequestDispatcher("/WEB-INF/event.jsp").forward(request, response);
 	}
 	
 	private Instant formatDateAndTime(String date, String time) {

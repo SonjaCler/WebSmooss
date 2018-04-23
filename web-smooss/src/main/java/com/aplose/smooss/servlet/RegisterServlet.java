@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.aplose.smooss.exception.EmailException;
+//import com.aplose.smooss.exception.EmailException;
 import com.aplose.smooss.model.User;
 import com.aplose.smooss.services.UserService;
 
@@ -53,11 +53,11 @@ public class RegisterServlet extends HttpServlet {
 		
 		try {
 			UserService.getInstance().create(u);
-			message = "Votre compte à bien été créé !";
-		} catch (EmailException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			message = e.getMessage();	
+			e.printStackTrace();
 		}
+		message = "Votre compte à bien été créé !";
 		response.sendRedirect("index.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
 		
 	}
