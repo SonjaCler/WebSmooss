@@ -116,7 +116,8 @@
 						</div>
 					</div>
 					<div class="form-group" style="text-align:center;">
-						<input id="checkbox" type="checkbox"><a href="cgu.view" style="padding:10px;">J'ai
+						<input id="checkbox" type="checkbox">
+						<a href="cgu.view" style="padding:10px;">J'ai
 							lu et j'accepte les Condtions Générales d'Utilisation</a>
 					</div>
 					<div class="modal-footer justify-content-center">
@@ -235,7 +236,6 @@
 			</div>
 		</div>
 	</footer>
-
 	<!-- Import js lib : jquery & bootstrap -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap/bootstrap.min.js"></script>
