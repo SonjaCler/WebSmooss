@@ -26,7 +26,7 @@
             
             <div class="row justify-content-center" id="middle_blocks">
                 <div class="clip-block">
-                	<a href="event.view">
+                	<a data-toggle="modal" data-target="#modalEventInfo">
 	                    <div class="clip-each clip-solid">
 	                        <div class="clip-caption">
 	                                <i class="fal fa-4x fa-calendar-alt"></i>
@@ -101,6 +101,56 @@
                             <div id="modal_date_event"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+          <div class="modal fade" id="modalEventInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Nouvel évènement</h5>
+                    </div>
+                    <form method="POST" action="EventController">
+	                    <div class="modal-body">
+	                    	<div class="form-group">
+	                    		<div class="input-group">
+	                    			<label for="pictureEvent" style="color: black;">Choisir une image :</label>
+	                    			<input type="file" name="pictureEvent" accept="image/*">
+	                    		</div>
+	                    	</div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="titleEvent" placeholder="Nom de l'évènement" class="input_modal">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <textarea style="resize: none;" name="descriptionEvent" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" name="locationEvent" id="adresse" placeholder="Adresse de l'évènement">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="date" name="startDateEvent" id="startDateEvent">
+                                    <input type="time" name="startTimeEvent" id="startTimeEvent">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="date" name="endDateEvent" id="endDateEvent">
+                                    <input type="time" name="endTimeEvent" id="endTimeEvent">
+                                </div>
+                            </div>
+	                    </div>
+	                    <div class="modal-footer justify-content-center">
+                            <button type="submit" class="btn btn-success button_submit_modal" id="button_submit_connexion_modal"> Créer un évènement </button>
+	                    </div>
+	            	</form>
                 </div>
             </div>
         </div>
