@@ -35,23 +35,26 @@ public class EventController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("idEvent");
-		response.setContentType("application/json");
-	    response.setCharacterEncoding("UTF-8");
+//		response.setContentType("application/json");
+//	    response.setCharacterEncoding("UTF-8");
 	    String json = "[]";
 		if (id!=null) {
-			//TODO get un event
+			Event evt = EventService.getInstance().read(Long.parseLong(id));
+			request.setAttribute("event", evt);
 		}else {
 			//Get all events for the connected user
 			User user = (User)request.getSession().getAttribute("user");
 			if (user != null) {
 				List<Event> events = EventService.getInstance().findEventsByUser(user);
-				ObjectMapper mapper = new ObjectMapper();
-				//Object to JSON in String
-				json = mapper.writeValueAsString(events);
+				request.setAttribute("events", events);
+				
+//				ObjectMapper mapper = new ObjectMapper();
+//				json = mapper.writeValueAsString(events);
 			}
 		}
-	    response.getWriter().write(json);
-		
+//	    response.getWriter().write(json);
+		getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
+
 	}
 
 	/**
