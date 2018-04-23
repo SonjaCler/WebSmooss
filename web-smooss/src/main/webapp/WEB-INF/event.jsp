@@ -7,21 +7,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Evenements</title>
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/event.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     </head>
     <body>
-        
         <form method="POST" action="EventController">
         	<div class="container-fluid img-title-description-event-block">
 		        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
 		        <div class="title-description-event">
-					<c:choose>
-					</c:choose>
-		        	<h2> <input type="text" class="input-event" name="titleEvent" id="titleEvent" placeholder="Nom de l'évènement"> </h2>
-		        	<textarea style="resize: none;" name="descriptionEvent" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
+		        	<jsp:useBean id="event" class="com.aplose.smooss.model.Event" scope="request"/>
+							
+					<h2> ${event.name} </h2>		
+					<p>${event.description}</p>
 		   		</div>
 			</div>
 	        <div class="container">
@@ -32,23 +31,20 @@
 	                </div> -->
 	                <div class="event-info">
 	                	<div class="">
-	                		Adresse : 
-	                		<input type="text" name="locationEvent" id="adresse">
+	                		Adresse : ${event.localisation}
 	                	</div>
 	                  	<div class="start-date-time-event">
-		                  	Début :
-		                  	<input type="date" name="startDateEvent" id="startDateEvent">
-		                  	<input type="time" name="startTimeEvent" id="startTimeEvent">
+		                  	Début : ${event.start}
 	                  	</div>
 	                  	<div class="end-date-time-event">
-		                  	Fin :
-		                  	<input type="date" name="endDateEvent" id="endDateEvent">
-		                  	<input type="time" name="endTimeEvent" id="endTimeEvent">
+		                  	Fin : ${event.end}
 	                    </div>
-	                    <hr>
-	                    <input type="submit" name="submitButton" id="submitButton" value="Créer mon Smooss">
+	                    <hr>                  
 	                </div>
 	            </div>
+	            <!-- <div class="row justify-content-center mt-4">
+					<input type="submit" class="btn btn-info" name="submitButton" id="submitButton" value="Créer mon Smooss">
+	            </div> -->
         </form>
        
             <div class="row justify-content-around mt-5 color_text" id="module_block">
@@ -89,7 +85,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <a href="#" id="button_redirect_home"> Retour à l'accueil </a>
+                <a href="home.view" id="button_redirect_home"> Retour à l'accueil </a>
             </div>
         </div>
 

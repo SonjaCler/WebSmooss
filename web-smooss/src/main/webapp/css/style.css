@@ -148,7 +148,31 @@ body {
     background-color                        : #fcfcfa;
 }
 
+.row {
+	color: white !important;
+}
 
+#h1cgu{
+	
+	text-decoration: underline;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	
+}
+
+#button_redirect_home {
+    background-color            : #ffc107;
+    color                       : white;
+    text-decoration             : none;
+    width                       : 200px;
+    height                      : 35px;
+    border-radius               : 5px;
+    display                     : flex;
+    justify-content             : center;
+    align-items                 : center;
+    font-weight                 : bold;
+}
 
 /*
 --
