@@ -28,7 +28,7 @@
 	crossorigin="anonymous"></script>
 
 <script src="./fontawesome-all.min.js"></script>
-<title>Insert title here</title>
+<title>Gestion du profil</title>
 </head>
 <body>
 	<div class="container-fluid">
