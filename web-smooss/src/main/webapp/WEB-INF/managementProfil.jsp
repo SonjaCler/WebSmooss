@@ -48,7 +48,7 @@
 
 			<div class="clip-block">
 
-				<a href="home_user.php" class="clip-each clip-gradient">
+				<a href="/home.jsp" class="clip-each clip-gradient">
 
 					<div class="clip-caption">
 
