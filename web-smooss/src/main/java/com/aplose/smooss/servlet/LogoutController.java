@@ -38,6 +38,8 @@ public class LogoutController extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		
 		if (session != null ) {
+			
+			session.removeAttribute("user");
 			session.invalidate();
 			
 			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);

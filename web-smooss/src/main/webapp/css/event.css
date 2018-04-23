@@ -8,11 +8,55 @@ body {
 #event_title_block {
     /* border                      : 2px solid red; */
 }
+.img-title-description-event-block {
+	position 					: relative;
+	display						: flex;
+	justify-content 			: center;
+	align-content 				: center;
+	align-items 				: center;
+}
+.title-description-event {
+	position					: absolute;
+    display 					: flex;
+    flex-direction 				: column;
+    align-items 				: center;
+    align-self 					: end;
+    margin-bottom 				: 1%;
+    
+}
+.input-event {
+	background					: transparent;
+	border 						: none;
+	border-bottom 				: 2px solid white;
+	color 						: white;
+	text-align 					: center;
+}
 
 #module_block {
     /* border                      : 2px solid green; */
+    display 					: none;
 }
 
+/* Start__@Author : Youli*/ 
+#imgParty { 
+    width                       : 100% !important;
+    min-width                   : 100% !important;
+}
+
+.Style5 {
+    position                    : absolute;
+    left                        : 38%;
+    top                         : 35%;
+    font-size                   : 36px;
+    color                       : #fff;
+}
+
+.event-info {
+    color                       : #fff;
+    
+    display 					: flex;
+}
+/*End__@Author : Youli */
 
 .modules_blocks {
     border                      : 2px solid salmon;

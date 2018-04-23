@@ -15,7 +15,7 @@
         
         <!-- Simple nav -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar_index">
-            <a class="navbar-brand" href="index.php" id="logo_home">Smooss</a>
+            <a class="navbar-brand" href="index.jsp" id="logo_home">Smooss</a>
             <p style="color: white;"> ${param.message} </p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -110,7 +110,7 @@
 	                                    <div class="input-group-prepend">
 	                                        <div class="input-group-text"> <i class="fas fa-user"></i> </div>
 	                                    </div>
-	                                    <input type="email" class="form-control" name="email" placeholder="Adresse mail | Pseudo" class="input_modal">
+	                                    <input type="email" class="form-control" name="email" placeholder="Adresse mail" class="input_modal">
 	                                </div>
 	                            </div>
 	                            <div class="form-group">
