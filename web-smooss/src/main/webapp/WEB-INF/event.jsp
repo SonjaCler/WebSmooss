@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <a href="#" id="button_redirect_home"> Retour à l'accueil </a>
+                <a href="index.jsp" id="button_redirect_home"> Retour à l'accueil </a>
             </div>
         </div>
 
