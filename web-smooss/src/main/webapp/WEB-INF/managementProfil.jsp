@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html>
@@ -48,7 +48,7 @@
 
 			<div class="clip-block">
 
-				<a href="home_user.php" class="clip-each clip-gradient">
+				<a href="/home.jsp" class="clip-each clip-gradient">
 
 					<div class="clip-caption">
 
@@ -98,7 +98,7 @@
 						</div>
 
 						<button type="submit" class="btn btn-warning btnFullCol"
-							style="color: #fff; background-color: #FFC107;">Save</button>
+							style="color: #fff; background-color: #FFC107;" action="/ProfileController">Save</button>
 
 					</div>
 
@@ -117,7 +117,7 @@
 
 									<button type="button"
 										style="color: #fff; background-color: #FFC107;"
-										class="btn btn-dark btnFullCol">Changer picture</button>
+										class="btn btn-dark btnFullCol" href="managementProfil.view" action="/ProfilerController">Changer picture</button>
 
 								</div>
 
