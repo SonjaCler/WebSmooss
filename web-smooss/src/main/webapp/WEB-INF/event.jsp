@@ -13,14 +13,18 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     </head>
     <body>
-        
         <form method="POST" action="EventController">
         	<div class="container-fluid img-title-description-event-block">
 		        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
 		        <div class="title-description-event">
 					<c:choose>
+						<c:when test="${evt.getName() != null}">
+							<h2>${evt.getName()}</h2>
+						</c:when>
+						<c:otherwise>
+							<h2> <input type="text" class="input-event" name="titleEvent" id="titleEvent" placeholder="Nom de l'évènement"> </h2>		
+						</c:otherwise>
 					</c:choose>
-		        	<h2> <input type="text" class="input-event" name="titleEvent" id="titleEvent" placeholder="Nom de l'évènement"> </h2>
 		        	<textarea style="resize: none;" name="descriptionEvent" class="input-event" rows="4" cols="50" placeholder="Description de l'évènement"></textarea>
 		   		</div>
 			</div>
