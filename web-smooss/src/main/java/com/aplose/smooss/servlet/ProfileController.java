@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.aplose.smooss.model.User;
 
 import com.aplose.smooss.services.UserService;
-
+ 
 /**
  * Servlet implementation class ProfileController
  */
