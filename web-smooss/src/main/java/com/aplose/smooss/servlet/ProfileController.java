@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.aplose.smooss.model.User;
 
@@ -68,11 +67,14 @@ public class ProfileController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User u = (User)request.getSession().getAttribute("user");
-		User newU = u;
-		if (u != newU) {
-			UserService.getInstance().update(u);
-			return;
-		} 
+		u.setEmail(request.getParameter("email"));
+		u.setFirstName(request.getParameter("firstName"));
+		u.setLastName(request.getParameter("lastName"));
+		u.setNickName(request.getParameter("nickName"));
+		u.setPassword(request.getParameter("password"));
+		UserService.getInstance().update(u);
+		
+		getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 		
 //		response.setContentType("text/html");
 //		User u = UserService.getInstance().findByEmailAndPassword("email", "password");

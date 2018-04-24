@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -67,7 +67,7 @@
 		<h4>&#149; Gestion du profil &#149;</h4>
 
 		<hr>
-		<form action="/ProfileController" method="POST">
+		<form action="ProfileController" method="POST">
 			<div class="container">
 
 				<div class="row">
