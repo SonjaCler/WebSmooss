@@ -130,7 +130,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Nouvel évènement</h5>
                     </div>
-                    <form method="POST" action="EventController">
+                    <form method="POST" action="EventController" enctype="multipart/form-data">
 	                    <div class="modal-body">
 	                    	<div class="form-group">
 	                    		<div class="input-group">
