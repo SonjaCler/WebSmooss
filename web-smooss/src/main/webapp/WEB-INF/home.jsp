@@ -73,14 +73,14 @@
 				<caption class="text-center">Ma liste d'évènements</caption>
 				<tbody id="body_event_list">
 					<c:forEach var="event" items="${events}">
-						<tr class="block_event_list">
-							<td class="title_td" id="title">${event.name}</td>
-							<td class="description_td" id="description">${event.description}</td>
-							<td class="date_td" id="date">${event.start}</td>
-							<td id="map"><a target="_blank"
-								href="https://www.google.com/maps/place/${event.localisation}">Voir
-									sur Maps</a></td>
-						</tr>
+							<tr class="block_event_list">
+								<td class="title_td" id="title"><a href="EventController?idEvent=${event.id}">${event.name}</a></td>
+								<td class="description_td" id="description">${event.description}</td>
+								<td class="date_td" id="date">${event.start}</td>
+								<td id="map"><a target="_blank"
+									href="https://www.google.com/maps/place/${event.localisation}">Voir
+										sur Maps</a></td>
+							</tr>
 					</c:forEach>
 				</tbody>
 			</table>

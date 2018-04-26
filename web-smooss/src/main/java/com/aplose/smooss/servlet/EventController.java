@@ -47,6 +47,7 @@ public class EventController extends HttpServlet {
 		if (id!=null) {
 			Event evt = EventService.getInstance().read(Long.parseLong(id));
 			request.setAttribute("event", evt);
+			getServletContext().getRequestDispatcher("/WEB-INF/event.jsp").forward(request, response);
 		}else {
 			//Get all events for the connected user
 			User user = (User)request.getSession().getAttribute("user");
