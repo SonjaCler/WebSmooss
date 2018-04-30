@@ -15,11 +15,10 @@
     <body>
         <form method="POST" action="EventController">
         	<div class="container-fluid img-title-description-event-block">
-		        <img src=".\img\event-category-cover-pictures-soiree.jpg" id="imgParty" alt="Image de votre évènement">
+		        <img src="data:image/png;base64,${event.picture}" id="imgParty" alt="Image de votre évènement">
 		        <div class="title-description-event">
 		        	<jsp:useBean id="event" class="com.aplose.smooss.model.Event" scope="request"/>
-							
-					<h2> ${event.name} </h2>		
+					<h2> ${event.name} </h2>		 
 					<p>${event.description}</p>
 		   		</div>
 			</div>

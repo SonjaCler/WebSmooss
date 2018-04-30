@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -67,7 +67,8 @@
 		<h4>&#149; Gestion du profil &#149;</h4>
 
 		<hr>
-		<form action="/ProfileController" method="POST">
+		<form action="ProfileController" method="POST"
+			enctype="multipart/form-data">
 			<div class="container">
 
 				<div class="row">
@@ -98,7 +99,8 @@
 						</div>
 
 						<button type="submit" class="btn btn-warning btnFullCol"
-							style="color: #fff; background-color: #FFC107;" action="/ProfileController">Save</button>
+							style="color: #fff; background-color: #FFC107;"
+							action="/ProfileController">Save</button>
 
 					</div>
 
@@ -113,11 +115,19 @@
 								<div class="card spaceInput">
 
 									<img class="card-img-top img-thumbnail"
-										src=".\img\photo_de_profil.png" alt="Card image cap">
+										src="data:image/png;base64,${user.picture}" alt="Card image cap">
+
+									<!-- @Cynthia -->
+
+									<input type="file" name="file" accept="image/*"><br>
+									<input type="submit" value="Upload File"><br>
+
+									<!-- @Cynthia -->
 
 									<button type="button"
 										style="color: #fff; background-color: #FFC107;"
-										class="btn btn-dark btnFullCol" href="managementProfil.view" action="/ProfilerController">Changer picture</button>
+										class="btn btn-dark btnFullCol" href="managementProfil.view"
+										action="/ProfilerController">Changer picture</button>
 
 								</div>
 

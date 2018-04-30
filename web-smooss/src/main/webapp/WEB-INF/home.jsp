@@ -73,14 +73,14 @@
 				<caption class="text-center">Ma liste d'évènements</caption>
 				<tbody id="body_event_list">
 					<c:forEach var="event" items="${events}">
-						<tr class="block_event_list">
-							<td class="title_td" id="title">${event.name}</td>
-							<td class="description_td" id="description">${event.description}</td>
-							<td class="date_td" id="date">${event.start}</td>
-							<td id="map"><a target="_blank"
-								href="https://www.google.com/maps/place/${event.localisation}">Voir
-									sur Maps</a></td>
-						</tr>
+							<tr class="block_event_list">
+								<td class="title_td" id="title"><a href="EventController?idEvent=${event.id}">${event.name}</a></td>
+								<td class="description_td" id="description">${event.description}</td>
+								<td class="date_td" id="date">${event.start}</td>
+								<td id="map"><a target="_blank"
+									href="https://www.google.com/maps/place/${event.localisation}">Voir
+										sur Maps</a></td>
+							</tr>
 					</c:forEach>
 				</tbody>
 			</table>
@@ -130,7 +130,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Nouvel évènement</h5>
                     </div>
-                    <form method="POST" action="EventController">
+                    <form method="POST" action="EventController" enctype="multipart/form-data">
 	                    <div class="modal-body">
 	                    	<div class="form-group">
 	                    		<div class="input-group">
@@ -165,6 +165,38 @@
                                     <input type="time" name="endTimeEvent" id="endTimeEvent">
                                 </div>
                             </div>
+                            <h5 style="color: black">Selectionner vos modules pour votre
+                            évènement:</h5>
+                        <div style="color: black">
+                            <div>
+                                <input type="checkbox" id="PlaylistModule" name="PlaylistModule" value="checked"> <label
+                                    for="">PlayList</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="TriCountModule" name="TriCountModule" value="checked"> <label
+                                    for="">Gestion des dépenses</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="PicturesModule" name="PicturesModule" value="checked"> <label
+                                    for="">Photos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="ChatModule" name="ChatModule" value="checked"> <label
+                                    for="">Chat</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="MiniGameModule" name="MiniGameModule" value="checked"> <label
+                                    for="">Mini-jeux</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="CarpoolingModule" name="CarpoolingModule" value="checked"> <label
+                                    for="">Covoiturage</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="BringModule" name="BringModule" value="checked"> <label
+                                    for="">Liste de courses</label>
+                            </div>
+                        </div>
 	                    </div>
 	                    <div class="modal-footer justify-content-center">
                             <button type="submit" class="btn btn-success button_submit_modal" id="button_submit_connexion_modal"> Créer un évènement </button>
