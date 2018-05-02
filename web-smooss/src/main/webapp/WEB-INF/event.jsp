@@ -44,7 +44,10 @@
 					<input type="submit" class="btn btn-info" name="submitButton" id="submitButton" value="Créer mon Smooss">
 	            </div> -->
 	</form>
-
+					<c:forEach var="event" items="${events.modules}">
+					<div class="hexagon_module"></div>
+					</c:forEach>
+						
 	<div class="row justify-content-around mt-5 color_text"
 		id="module_block">
 		<div class="hexagon_module">
