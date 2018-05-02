@@ -79,10 +79,12 @@
 		</div>
 	</div>
 	<div class="row justify-content-center mt-5">
-	
-	<!-- 	<button method="DELETE" action="EventController"
-			href="EventController?idEvent=${event.id}" id="button_redirect_home">Supprimer
-			l'event</button> -->
+
+		<form action="EventController" method="post">
+			<input type="hidden" name="idEvent" value="${event.id}"/>
+			<input type="submit" name="inputDelete" id="button_redirect_home" value="Supprimer l'Event"/>
+		</form>
+
 	</div>
 	<div class="row justify-content-center mt-5">
 		<a href="EventController" id="button_redirect_home"> Retour à
