@@ -165,6 +165,38 @@
                                     <input type="time" name="endTimeEvent" id="endTimeEvent">
                                 </div>
                             </div>
+                            <h5 style="color: black">Selectionner vos modules pour votre
+                            évènement:</h5>
+                        <div style="color: black">
+                            <div>
+                                <input type="checkbox" id="PlaylistModule" name="PlaylistModule" value="checked"> <label
+                                    for="">PlayList</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="TriCountModule" name="TriCountModule" value="checked"> <label
+                                    for="">Gestion des dépenses</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="PicturesModule" name="PicturesModule" value="checked"> <label
+                                    for="">Photos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="ChatModule" name="ChatModule" value="checked"> <label
+                                    for="">Chat</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="MiniGameModule" name="MiniGameModule" value="checked"> <label
+                                    for="">Mini-jeux</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="CarpoolingModule" name="CarpoolingModule" value="checked"> <label
+                                    for="">Covoiturage</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="BringModule" name="BringModule" value="checked"> <label
+                                    for="">Liste de courses</label>
+                            </div>
+                        </div>
 	                    </div>
 	                    <div class="modal-footer justify-content-center">
                             <button type="submit" class="btn btn-success button_submit_modal" id="button_submit_connexion_modal"> Créer un évènement </button>
