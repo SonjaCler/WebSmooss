@@ -101,4 +101,23 @@ public class EventController extends HttpServlet {
 		return Instant.parse(sb.toString());
 	}
 
+	@Override
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// EventService.getInstance().modify(evt);
+		// super.doPut(request, response);
+	}
+
+	@Override
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String id = request.getParameter("idEvent");
+		// Event evt = new Event();
+		Event evt = EventService.getInstance().read(Long.parseLong(id));
+		EventService.getInstance().delete(evt);
+		// super.doDelete(request, response);
+	}
+	
+	
+
 }
